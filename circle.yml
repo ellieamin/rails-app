@@ -1,5 +1,6 @@
 deployment:
   staging:
     branch: user-log-in
-    heroku:
-      appname: shielded-shore-60050
+    commands:
+      - git push git@heroku.com:shielded-shore-60050.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rails db:migrate --app shielded-shore-60050
