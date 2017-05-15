@@ -1,0 +1,5 @@
+deployment:
+  staging:
+    branch: user-log-in
+    heroku:
+      appname: shielded-shore-60050
